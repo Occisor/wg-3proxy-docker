@@ -25,6 +25,6 @@ services:
     image: 3proxy/3proxy:0.9.4
     container_name: wg-3p.3proxy.1
     volumes:
-      - "${PWD}/3proxy/config:/usr/local/3proxy" #3proxy config dir
+      - "${PWD}/3proxy/config/conf:/usr/local/3proxy/conf" #3proxy config dir
     network_mode: "service:wireguard_cli"
     restart: unless-stopped #optional
