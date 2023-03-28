@@ -26,7 +26,7 @@ Error may occur when running in wsl2
 `wg-3p.wireguard_cli.1 | Warning: Extension CONNMARK revision 0 not supported, missing kernel module?
 wg-3p.wireguard_cli.1 | iptables-restore: line 7 failed`
 
-Go to directory `wg-3proxy-docker/wireguard/config`
+Go to directory `wg-3proxy-docker/wireguard`
 
 And run wsl2-wg-quick.sh
 
