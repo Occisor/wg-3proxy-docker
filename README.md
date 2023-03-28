@@ -9,4 +9,12 @@ Enter the working directory `wg-3proxy-docker`
 
 Copy the WireGuard connection configuration file to the directory `./wg-3proxy-docker/wireguard/config/`. The file name should be `wg0.conf`.
 This is enough for a basic startup.
-Build containers with `docker-compose.yml` by running `docker-compose up -d` in the `wg-3proxy-docker` directory.
+Build containers with `docker-compose.yml` by running `docker-compose up` in the `wg-3proxy-docker` directory.
+
+If there are no errors in the output, then the wireguard connection is successful. You can connect to a proxy server.
+
+`Web-admin: http://localhost:8080`
+
+`HTTP proxy: localhost:3129`
+
+`SOCKS5: localhost:1080`
