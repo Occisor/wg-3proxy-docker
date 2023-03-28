@@ -13,10 +13,11 @@ services:
       - TZ=Etc/UTC
       - LOG_CONFS=true #optional
     ports:
-      - "9080:9080" #socks5 port 3proxy
-      - "8090:8090" #admin port 3proxy
+      - 8080:8080 #socks5 port 3proxy
+      - 1080:1080 #admin port 3proxy
+      - 3129:3129 #http port 3proxy
     volumes:
-      - "${PWD}/wireguard/config:/config" #wireguard config dir
+      - "./wireguard/config:/config:ro" #wireguard config dir wg0.conf
       - "/lib/modules:/lib/modules:ro" #optional
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
@@ -25,6 +26,6 @@ services:
     image: 3proxy/3proxy:0.9.4
     container_name: wg-3p.3proxy.1
     volumes:
-      - "${PWD}/3proxy/config/conf:/usr/local/3proxy/conf" #3proxy config dir
+      - "./3proxy/config/conf:/usr/local/3proxy/conf:ro" #3proxy config dir
     network_mode: "service:wireguard_cli"
     restart: unless-stopped #optional
