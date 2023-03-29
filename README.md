@@ -30,7 +30,7 @@ wg-3p.wireguard_cli.1 | iptables-restore: line 7 failed`
 
 Go to directory `wg-3proxy-docker/wireguard`
 
-And run wsl2-wg-quick.sh
+And run `wsl2-wg-quick.sh`
 
 ```
 sh wsl2-wg-quick.sh
