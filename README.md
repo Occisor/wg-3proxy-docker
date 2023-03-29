@@ -5,7 +5,9 @@ Both own servers and vpn service providers are supported. Thanks to the 3proxy f
 ## Setup
 Enter the working directory `wg-3proxy-docker`
 
-`cd /path/to/dir/wg-3proxy-docker`
+```
+cd /path/to/dir/wg-3proxy-docker
+```
 
 Copy the WireGuard connection configuration file to the directory `./wg-3proxy-docker/wireguard/config/`. The file name should be `wg0.conf`.
 This is enough for a basic startup.
@@ -30,7 +32,9 @@ Go to directory `wg-3proxy-docker/wireguard`
 
 And run wsl2-wg-quick.sh
 
-`sh wsl2-wg-quick.sh`
+```
+sh wsl2-wg-quick.sh
+```
 
 This will copy the "patched" `wg-quick` file into the container.
 Then restart docker-compose `docker-compose restart` or `docker-compose stop` -> `docker-compose up`
