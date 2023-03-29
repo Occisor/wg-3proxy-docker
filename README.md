@@ -11,9 +11,9 @@ cd /path/to/dir/wg-3proxy-docker
 
 Copy the WireGuard connection configuration file to the directory `./wg-3proxy-docker/wireguard/config/`. The file name should be `wg0.conf`.
 This is enough for a basic startup.
-Build containers with `docker-compose.yml` by running `docker-compose up` in the `wg-3proxy-docker` directory.
+Build containers with `docker-compose.yml` by running `docker compose up` in the `wg-3proxy-docker` directory.
 ```
-docker-compose up
+docker compose up
 ```
 If there are no errors in the output, then the wireguard connection is successful. You can connect to a proxy server.
 
@@ -39,4 +39,4 @@ sh wsl2-patch.sh
 ```
 
 This will make changes to the `wg-quick` file in the container `wg-3p.wireguard_cli.1`.
-Then restart docker-compose `docker-compose restart` or `docker-compose stop` -> `docker-compose up`
+Then restart docker-compose `docker compose restart` or `docker compose stop` -> `docker compose up`
