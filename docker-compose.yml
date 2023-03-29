@@ -13,11 +13,11 @@ services:
       - TZ=Etc/UTC
       - LOG_CONFS=true #optional
     ports:
-      - 8080:8080 #socks5 port 3proxy
-      - 1080:1080 #admin port 3proxy
+      - 8080:8080 #admin port 3proxy
+      - 1080:1080 #socks5 port 3proxy
       - 3129:3129 #http port 3proxy
     volumes:
-      - "./wireguard/config:/config:ro" #wireguard config dir wg0.conf
+      - "./wireguard/config:/config" #wireguard config dir wg0.conf
       - "/lib/modules:/lib/modules:ro" #optional
     sysctls:
       - net.ipv4.conf.all.src_valid_mark=1
