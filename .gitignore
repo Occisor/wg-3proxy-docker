@@ -19,3 +19,6 @@ $RECYCLE.BIN/
 
 # Wireguard config
 wg0.conf
+Corefile
+peer.conf
+server.conf
