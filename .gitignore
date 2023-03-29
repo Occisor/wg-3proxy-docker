@@ -16,5 +16,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
 # Wireguard config
 wg0.conf
